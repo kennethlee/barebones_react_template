@@ -2,28 +2,28 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    './src/index.js'
+    './src/index.js',
   ],
   module: {
     loaders: [{
       test: /\.js?$/,
       exclude: /node_modules/,
-      loader: 'react-hot!babel'
-    }]
+      loader: 'react-hot!babel',
+    }],
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
   },
   output: {
     path: 'dist',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
     contentBase: './dist',
-    hot: true
+    hot: true,
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
